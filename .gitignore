@@ -1,3 +1,12 @@
+# Don't track content of these folders
+Debug/
+Release/
+
+# Project Files
+*.vcxproj
+*.filters
+*.user
+
 # Compiled Object files
 *.slo
 *.lo

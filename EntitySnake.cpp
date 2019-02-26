@@ -16,7 +16,7 @@ EntitySnake::EntitySnake(int x, int y, int size, int worldWidth, int worldHeight
 
 void EntitySnake::handleCollision(GameObject *other) {
     GameObject::handleCollision(other);
-    if (strcmp(other->id.c_str(), "Fruit") == 0) {
+    if (strcmp(other->getId(), "Fruit") == 0) {
         ++score;
         Engine *engine = Engine::getExistingInstance();
 		GameObjectPool *pool = GameObjectPool::getInstance();
@@ -26,7 +26,7 @@ void EntitySnake::handleCollision(GameObject *other) {
 			newTail->init(engine->getRenderer(), gTexture, new int[1]{ 1 }, 1, 16, 16);
             newTail->setId(std::string("Tail"));
             std::cout << "New Tail Created" << std::endl;
-			pool->add(*newTail);
+			pool->add(*newTail, 0);
             if (tail == nullptr) {
                 tail = newTail;
             } else {
@@ -36,7 +36,7 @@ void EntitySnake::handleCollision(GameObject *other) {
             std::cerr << "Could not load Engine in Entity Snake" << std::endl;
         }
     }
-    if (strcmp(other->id.c_str(), "Tail") == 0) {
+    if (strcmp(other->getId(), "Tail") == 0) {
         score = 0;
         if (tail != nullptr) {
             tail->flag(true);

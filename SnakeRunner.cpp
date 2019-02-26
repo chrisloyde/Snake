@@ -1,6 +1,6 @@
 #include "SnakeRunner.h"
 
-#include "engine/TextureManager.h"
+#include "ruin_engine/TextureManager.h"
 
 Texture* SnakeRunner::RED_BLOCK;
 Texture* SnakeRunner::BLUE_BLOCK;
@@ -57,7 +57,7 @@ bool SnakeRunner::init() {
 	player->init(engine->getRenderer(), BLUE_BLOCK, new int[1]{ 1 }, 1, SPRITE_SIZE, SPRITE_SIZE);		
 	player->setId(std::string("Player"));
 
-	pool->add(*player);																												// Add Player to object pool.
+	pool->add(*player, 0);																												// Add Player to object pool.
 
 	/* Initialize Fruits */
 	for (int i = 0; i < 4; i++) {																									// Use a loop to create and intialize fruit objects then add them to the object pool.
@@ -65,7 +65,7 @@ bool SnakeRunner::init() {
 		fruit->init(engine->getRenderer(), RED_BLOCK, new int[1]{ 1 }, 1, SPRITE_SIZE, SPRITE_SIZE);
 		fruit->addCamera(&camera);
 		fruit->setId(std::string("Fruit"));
-		pool->add(*fruit);
+		pool->add(*fruit, 0);
 	}
 
 	if (success) {

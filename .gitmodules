@@ -1,0 +1,3 @@
+[submodule "ruin_engine"]
+	path = ruin_engine
+	url = https://gitea.gildedgames.com/Chris/Ruin2D_Engine.git

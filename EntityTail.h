@@ -1,6 +1,6 @@
 #pragma once
 
-#include "engine/GameObject.h"
+#include "ruin_engine/GameObject.h"
 
 class EntityTail: public GameObject {
 public:

@@ -2,8 +2,8 @@
 #include <iostream>
 #include <ctime>
 #include <sstream>
-#include "engine/GameRunner.h"
-#include "engine/Timer.h"
+#include "ruin_engine/GameRunner.h"
+#include "ruin_engine/Timer.h"
 #include "EntitySnake.h"
 #include "Fruit.h"
 

@@ -2,9 +2,9 @@
 #pragma once
 
 #include <vector>
-#include "engine/GameObject.h"
-#include "engine/Engine.h"
-#include "engine/GameObjectPool.h"
+#include "ruin_engine/GameObject.h"
+#include "ruin_engine/Engine.h"
+#include "ruin_engine/GameObjectPool.h"
 #include "EntityTail.h"
 //#include "SnakeRunner.h"
 
